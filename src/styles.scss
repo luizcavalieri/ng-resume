@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'assets/sass/libs/vars';
+@import 'assets/sass/libs/functions';
+@import 'assets/sass/libs/mixins';
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
+
+@import "assets/sass/main";
+@import "assets/sass/custom";
+
+@import "app/modules/layout/layout.component";
+@import "app/modules/layout/header/header.component";
