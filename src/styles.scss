@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~@angular/material/prebuilt-themes/indigo-pink';
+
 @import 'assets/sass/libs/vars';
 @import 'assets/sass/libs/functions';
 @import 'assets/sass/libs/mixins';
@@ -10,3 +12,4 @@
 
 @import "app/modules/layout/layout.component";
 @import "app/modules/layout/header/header.component";
+@import "app/modules/front-page/skills/skills.component";

@@ -8,11 +8,17 @@ import { BannerComponent } from './banner/banner.component';
 import { CareerObjectiveComponent } from './career-objective/career-objective.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { SkillsComponent } from './skills/skills.component';
+import { MatGridListModule, MatProgressBarModule, MatSidenavModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
-    FrontPageRoutingModule
+    FrontPageRoutingModule,
+    MatSidenavModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    MatProgressBarModule,
   ],
   declarations: [
     FrontPageComponent,

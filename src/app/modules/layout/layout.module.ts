@@ -11,8 +11,7 @@ import { MatSidenavModule } from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
-    LayoutRoutingModule,
-    MatSidenavModule
+    LayoutRoutingModule
   ],
   declarations: [
     ContactMeComponent,

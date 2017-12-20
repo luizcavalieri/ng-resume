@@ -9,7 +9,12 @@ import { AcademicModule } from './modules/academic/academic.module';
 import { LayoutModule } from './modules/layout/layout.module';
 import { ProfessionalExperienceModule } from './modules/professional-experience/professional-experience.module';
 import { CareerAchievementModule } from './modules/career-achievement/career-achievement.module';
-import { MatSidenavModule } from '@angular/material';
+import {
+  MatGridListModule,
+  MatProgressBarModule,
+  MatSidenavModule
+} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -25,7 +30,15 @@ import { MatSidenavModule } from '@angular/material';
     LayoutModule,
     ProfessionalExperienceModule,
     CareerAchievementModule,
-    MatSidenavModule
+    FlexLayoutModule,
+    MatProgressBarModule,
+    MatSidenavModule,
+    MatGridListModule,
+  ],
+  exports: [
+    MatSidenavModule,
+    MatGridListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
