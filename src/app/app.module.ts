@@ -13,7 +13,9 @@ import {
   MatGridListModule,
   MatIconModule,
   MatProgressBarModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatTableDataSource,
+  MatTableModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
@@ -37,11 +39,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatGridListModule,
     MatIconModule,
+    MatTableModule,
     HttpClientModule,
   ],
   exports: [
     MatSidenavModule,
     MatGridListModule,
+    MatTableModule,
     FlexLayoutModule,
     MatIconModule,
   ],
