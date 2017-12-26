@@ -1,10 +1,36 @@
+@import '../../../assets/sass/libs/_mixins.scss';
+@import '../../../assets/sass/libs/_skel.scss';
+@import '../../../assets/sass/libs/_vars.scss';
+@import '../../../assets/sass/libs/_functions.scss';
+
+
+@include skel-breakpoints((
+  xlarge: '(min-width: 1680px)',
+  large: '(min-width: 1280px)',
+  medium: '(min-width: 980px)',
+  small: '(min-width: 736px)',
+  xsmall: '(min-width: 480px)'
+));
+
+
+
+.sidenav__toggle-btn{
+
+
+}
+.mat-drawer {
+  background-color: $secondaryBackgroundColor;
+}
+
+
+
 .sidenav{
 
   &__toggle{
 
     &-container{
       display: flex;
-      height: 40px;
+      //height: 40px;
       //position: fixed;
       right: 0px;
       z-index: 1000;
@@ -13,11 +39,33 @@
     }
 
     &-btn{
-      right: 0px;
+      font-size: 1em;
+      right: 0;
       top: 0;
       position: fixed;
       z-index: _misc(z-index-base);
+      padding: 0.5em 1.75em;
+      border: 0 solid $mainBackgroundColor;
+      box-shadow: inset 0 0 0 0 #fff;
 
+      &:hover{
+        background: transparent;
+
+        span{
+          text-decoration: underline;
+        }
+      }
+
+      span{
+        vertical-align: super;
+        line-height: 1;
+      }
+
+      mat-icon{
+        width: 20px;
+        height: 25px;
+        color: $mainFontColor;
+      }
     }
   }
 }
@@ -26,5 +74,19 @@
 mat-sidenav{
   width: 20em;
   z-index: 200 !important;
-  background: #0da5d7;
+  background: $secondaryBackgroundColor;
+}
+
+
+.mat-drawer-container {
+  @include vendor('background-image', ('linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("./~/assets/img/main-background.jpg")'));
+  color: $mainFontColor;
+  background: {
+    color: $mainBackgroundColor;
+    attachment: fixed;
+    position: center center;
+    repeat: no-repeat;
+    size: cover;
+  };
+
 }

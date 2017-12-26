@@ -24,7 +24,6 @@ export class MyWorkComponent implements OnInit {
 
   updateGrid(): void {
 
-    console.log('ired')
     if (this.media.isActive('xl')) { this.grid.cols = 3; }
     else if (this.media.isActive('lg')) { this.grid.cols = 3; }
     else if (this.media.isActive('md')) { this.grid.cols = 2; }

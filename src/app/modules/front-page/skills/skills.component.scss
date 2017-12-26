@@ -1,3 +1,17 @@
+@import '../../../../assets/sass/libs/_mixins.scss';
+@import '../../../../assets/sass/libs/_skel.scss';
+@import '../../../../assets/sass/libs/_vars.scss';
+@import '../../../../assets/sass/libs/_functions.scss';
+
+
+@include skel-breakpoints((
+  xlarge: '(min-width: 1680px)',
+  large: '(min-width: 1280px)',
+  medium: '(min-width: 980px)',
+  small: '(min-width: 736px)',
+  xsmall: '(min-width: 480px)'
+));
+
 section{
 
   &.skills{
@@ -5,16 +19,18 @@ section{
 
     .skills__grid{
       width: 100%;
-      max-width: 1024px;
+      max-width: 60em;
       flex-direction: row;
       display: flex;
+      flex-wrap: wrap;
+      margin: auto;
 
-      > div{
-        width: 50%;
+      > div.skills__row{
+        width: 100%;
 
-        //@include breakpoint(small){
-        //  width: 100%;
-        //}
+        @include breakpoint(medium){
+          width: 50%;
+        }
       }
     }
 

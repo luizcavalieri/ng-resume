@@ -1,13 +1,12 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav
                mode="over"
-               [(opened)]="opened"
                (opened)="events.push('open!')"
                (closed)="events.push('close!')"
                fixedInViewport
                align="end">
-
     <nav id="nav">
+          <a (click)="sidenav.toggle()" class="close"> X </a>
           <div id="menu">
             <ul>
               <li>
@@ -46,10 +45,9 @@
   <mat-sidenav-content>
 
     <div class="sidenav__toggle-container">
-      <button mat-button (click)="sidenav.toggle()" class="sidenav__toggle-btn">
-        <span>
-          Menu
-        </span>
+      <button (click)="sidenav.toggle()" class="sidenav__toggle-btn">
+        <span>Menu</span>
+        <mat-icon svgIcon="menu"></mat-icon>
       </button>
     </div>
 

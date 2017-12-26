@@ -1,13 +1,11 @@
 <!-- Header -->
 
-<header id="header" class="alt">
-  <h1>
-    <a href="index.html">
+<header id="header" class="alt"  [ngClass]="headerClass">
+  <h1 [@scrollAnimation]="state">
+    <a href="index.html" class="">
       Luiz Cavalieri
     </a>
   </h1>
-
-
 </header>
 
 
